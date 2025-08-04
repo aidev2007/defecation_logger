@@ -670,12 +670,12 @@ function formatDate($date_str) {
 
         // キーボードイベントの処理
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'PageUp' || e.key === 'PageDown') {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
                 e.preventDefault();
                 const currentIndex = tabs.indexOf(currentTab);
                 let newIndex;
                 
-                if (e.key === 'PageUp') {
+                if (e.key === 'ArrowLeft') {
                     newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
                 } else {
                     newIndex = (currentIndex + 1) % tabs.length;
